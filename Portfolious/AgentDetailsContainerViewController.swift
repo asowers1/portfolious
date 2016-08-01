@@ -13,8 +13,5 @@ class AgentDetailsContainerViewController: UIViewController {
     @IBOutlet weak var agentName: UILabel!
     @IBOutlet weak var agentEmail: UILabel!
     @IBOutlet weak var agentPhone: UILabel!
-    @IBOutlet weak var importContactButton: UIButton!
 
-    @IBAction func didTapImportContact(sender: AnyObject) {
-    }
 }
