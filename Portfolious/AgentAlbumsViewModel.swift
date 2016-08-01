@@ -10,6 +10,7 @@ import Foundation
 import ReactiveJSON
 import Argo
 import Result
+import UIKit
 
 protocol AgentAlbumViewModelDelegate: class {
     func didUpdateAlbumsModel(withModel model: AgentAlbumViewModel)
@@ -48,5 +49,11 @@ struct AgentAlbumViewModel {
                     print("Error: \(error)")
                 }
         }
+    }
+    
+    func cell(forIndexPath indexPath: NSIndexPath, onTableView tableView: UITableView) -> AgentAlbumTableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentAlbumCell) as! AgentAlbumTableViewCell
+        cell.albumName?.text = albums[indexPath.row].title
+        return cell
     }
 }

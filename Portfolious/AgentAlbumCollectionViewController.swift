@@ -36,9 +36,7 @@ extension AgentAlbumCollectionViewController {
         print("did the thing at \(indexPath)")
     }
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MainStoryboard.ReuseIdentifiers.AgentPhotoCell, forIndexPath: indexPath) as! AgentPhotoCollectionViewCell
-        viewModel?.imageView(forIndexPath: indexPath, andImageView: cell.imageView)
-        return cell
+        return viewModel!.cell(forIndexPath: indexPath, onCollectionView: collectionView)
     }
 }
 

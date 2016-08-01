@@ -10,6 +10,7 @@ import Foundation
 import ReactiveJSON
 import Result
 import Argo
+import UIKit
 
 protocol AgentListTableViewModelDelegate: class {
     func updateWith(viewModel: AgentListTableViewModel)
@@ -50,5 +51,15 @@ struct AgentListTableViewModel {
         } else {
             return nil
         }
+    }
+    
+    func cell(forIndexPath indexPath: NSIndexPath, onTableView tableView: UITableView) -> AgentOverviewTableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentPortfolioCell) as! AgentOverviewTableViewCell
+        if users.indices.contains(indexPath.row) {
+            let user = users[indexPath.row]
+            
+            cell.agentName?.text = user.name
+        }
+        return cell
     }
 }

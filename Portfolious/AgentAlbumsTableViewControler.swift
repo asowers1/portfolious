@@ -34,11 +34,7 @@ extension AgentAlbumsTableViewControler {
         parentViewController?.performSegueWithIdentifier(MainStoryboard.Segues.AgentAlbumCollectionViewControllerSegue, sender: parentViewController)
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentAlbumCell) as! AgentAlbumTableViewCell
-        if let vm = viewModel {
-            cell.albumName?.text = vm.albums[indexPath.row].title
-        }
-        return cell
+        return viewModel!.cell(forIndexPath: indexPath, onTableView: tableView)
     }
 }
 

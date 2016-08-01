@@ -53,4 +53,10 @@ struct AlbumPhotosViewModel {
     func imageView(forIndexPath indexPath: NSIndexPath, andImageView imageView: UIImageView?) {
         imageView?.imageFromServerURL(photos[indexPath.row].url)
     }
+    
+    func cell(forIndexPath indexPath: NSIndexPath, onCollectionView collectionView: UICollectionView) -> AgentPhotoCollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MainStoryboard.ReuseIdentifiers.AgentPhotoCell, forIndexPath: indexPath) as! AgentPhotoCollectionViewCell
+        imageView(forIndexPath: indexPath, andImageView: cell.imageView)
+        return cell
+    }
 }

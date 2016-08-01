@@ -41,13 +41,7 @@ extension AgentListTableViewController {
         performSegueWithIdentifier(MainStoryboard.Segues.AgentOverviewViewControllerSegue, sender: self)
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentPortfolioCell) as! AgentOverviewTableViewCell
-        if viewModel.users.indices.contains(indexPath.row) {
-            let user = viewModel.users[indexPath.row]
-            
-            cell.agentName?.text = user.name
-        }
-        return cell
+        return viewModel.cell(forIndexPath: indexPath, onTableView: tableView)
     }
 }
 
