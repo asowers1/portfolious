@@ -9,6 +9,5 @@
 import UIKit
 
 class AgentAlbumTableViewCell: UITableViewCell {
-    @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var albumName: UILabel!
 }
