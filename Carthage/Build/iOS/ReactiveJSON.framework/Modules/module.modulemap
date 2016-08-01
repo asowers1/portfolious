@@ -1,0 +1,10 @@
+framework module ReactiveJSON {
+  umbrella header "ReactiveJSON.h"
+
+  export *
+  module * { export * }
+}
+
+module ReactiveJSON.Swift {
+    header "ReactiveJSON-Swift.h"
+}

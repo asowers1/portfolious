@@ -1,0 +1,6 @@
+github "thoughtbot/Argo" "v3.1.0"
+github "thoughtbot/Curry" "v2.3.3"
+github "antitypical/Result" "2.1.3"
+github "thoughtbot/Runes" "v3.2.1"
+github "ReactiveCocoa/ReactiveCocoa" "v4.2.2"
+github "KevinVitale/ReactiveJSON" "23295aa95c6a16a2afe8e098674be0f37a248107"

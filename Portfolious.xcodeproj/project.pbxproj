@@ -8,12 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		493347B91D4CD042003847CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347B81D4CD042003847CD /* AppDelegate.swift */; };
-		493347BB1D4CD042003847CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347BA1D4CD042003847CD /* ViewController.swift */; };
 		493347BE1D4CD042003847CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493347BC1D4CD042003847CD /* Main.storyboard */; };
 		493347C01D4CD042003847CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493347BF1D4CD042003847CD /* Assets.xcassets */; };
 		493347C31D4CD042003847CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493347C11D4CD042003847CD /* LaunchScreen.storyboard */; };
 		493347CE1D4CD042003847CD /* PortfoliousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347CD1D4CD042003847CD /* PortfoliousTests.swift */; };
 		493347D91D4CD042003847CD /* PortfoliousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347D81D4CD042003847CD /* PortfoliousUITests.swift */; };
+		493347E91D4CD8C0003847CD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */; };
+		493347EA1D4CD8C1003847CD /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493347EB1D4CD8C1003847CD /* ReactiveJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E71D4CD8C0003847CD /* ReactiveJSON.framework */; };
+		493347EC1D4CD8C1003847CD /* ReactiveJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E71D4CD8C0003847CD /* ReactiveJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493347ED1D4CD8C1003847CD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E81D4CD8C0003847CD /* Result.framework */; };
+		493347EE1D4CD8C1003847CD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E81D4CD8C0003847CD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493347F91D4CDBEC003847CD /* JSONPlaceholderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347F81D4CDBEC003847CD /* JSONPlaceholderClient.swift */; };
+		493347FB1D4CE124003847CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347FA1D4CE124003847CD /* User.swift */; };
+		493347FD1D4CE12A003847CD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347FC1D4CE12A003847CD /* Album.swift */; };
+		493348001D4CFF31003847CD /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 493347FF1D4CFF31003847CD /* SF-UI-Display-Regular.otf */; };
+		493348021D4D054B003847CD /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 493348011D4D054B003847CD /* SF-UI-Display-Medium.otf */; };
+		493348041D4D0555003847CD /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 493348031D4D0555003847CD /* SF-UI-Display-Light.otf */; };
+		493348061D4D0664003847CD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348051D4D0664003847CD /* Theme.swift */; };
+		493348081D4D0BDF003847CD /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348071D4D0BDF003847CD /* MainStoryboard.swift */; };
+		4933480A1D4D1855003847CD /* AgentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348091D4D1855003847CD /* AgentListTableViewController.swift */; };
+		4933480C1D4D1877003847CD /* AgentOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933480B1D4D1877003847CD /* AgentOverviewViewController.swift */; };
+		4933480E1D4D18A6003847CD /* AgentAlbumsTableViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933480D1D4D18A6003847CD /* AgentAlbumsTableViewControler.swift */; };
+		493348101D4D18BD003847CD /* AgentAlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933480F1D4D18BD003847CD /* AgentAlbumCollectionViewController.swift */; };
+		493348121D4D18D9003847CD /* AgentDetailsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348111D4D18D9003847CD /* AgentDetailsContainerViewController.swift */; };
+		493348141D4D1A8D003847CD /* AgentOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348131D4D1A8D003847CD /* AgentOverviewTableViewCell.swift */; };
+		493348161D4D1A9E003847CD /* AgentAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348151D4D1A9E003847CD /* AgentAlbumTableViewCell.swift */; };
+		493348181D4D1AB7003847CD /* AgentPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348171D4D1AB7003847CD /* AgentPhotoCollectionViewCell.swift */; };
+		4933481B1D4D1BA1003847CD /* AgentListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933481A1D4D1BA1003847CD /* AgentListTableViewModel.swift */; };
+		4933481F1D4D2B9F003847CD /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4933481E1D4D2B9F003847CD /* Argo.framework */; };
+		493348201D4D2B9F003847CD /* Argo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4933481E1D4D2B9F003847CD /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493348221D4D2F11003847CD /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493348211D4D2F11003847CD /* Runes.framework */; };
+		493348231D4D2F11003847CD /* Runes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493348211D4D2F11003847CD /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493348251D4D316C003847CD /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493348241D4D316C003847CD /* Curry.framework */; };
+		493348261D4D316C003847CD /* Curry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493348241D4D316C003847CD /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493348281D4E7CAD003847CD /* PortfoliousRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348271D4E7CAD003847CD /* PortfoliousRootNavigationController.swift */; };
+		4933482A1D4E828D003847CD /* AgentOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348291D4E828D003847CD /* AgentOverviewViewModel.swift */; };
+		4933482F1D4E96E9003847CD /* AgentAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933482E1D4E96E9003847CD /* AgentAlbumsViewModel.swift */; };
+		493348311D4EBFF2003847CD /* AlbumPhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348301D4EBFF2003847CD /* AlbumPhotosViewModel.swift */; };
+		493348331D4EC768003847CD /* ImageFromServerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348321D4EC768003847CD /* ImageFromServerURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +66,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		493347EF1D4CD8C1003847CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				493347EE1D4CD8C1003847CD /* Result.framework in Embed Frameworks */,
+				493347EA1D4CD8C1003847CD /* ReactiveCocoa.framework in Embed Frameworks */,
+				493348261D4D316C003847CD /* Curry.framework in Embed Frameworks */,
+				493347EC1D4CD8C1003847CD /* ReactiveJSON.framework in Embed Frameworks */,
+				493348231D4D2F11003847CD /* Runes.framework in Embed Frameworks */,
+				493348201D4D2B9F003847CD /* Argo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		493347B51D4CD042003847CD /* Portfolious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493347B81D4CD042003847CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		493347BA1D4CD042003847CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		493347BD1D4CD042003847CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		493347BF1D4CD042003847CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		493347C21D4CD042003847CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +98,34 @@
 		493347D41D4CD042003847CD /* PortfoliousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfoliousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493347D81D4CD042003847CD /* PortfoliousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfoliousUITests.swift; sourceTree = "<group>"; };
 		493347DA1D4CD042003847CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		493347E71D4CD8C0003847CD /* ReactiveJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveJSON.framework; path = Carthage/Build/iOS/ReactiveJSON.framework; sourceTree = "<group>"; };
+		493347E81D4CD8C0003847CD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		493347F81D4CDBEC003847CD /* JSONPlaceholderClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderClient.swift; sourceTree = "<group>"; };
+		493347FA1D4CE124003847CD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		493347FC1D4CE12A003847CD /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		493347FF1D4CFF31003847CD /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		493348011D4D054B003847CD /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		493348031D4D0555003847CD /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		493348051D4D0664003847CD /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		493348071D4D0BDF003847CD /* MainStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
+		493348091D4D1855003847CD /* AgentListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentListTableViewController.swift; sourceTree = "<group>"; };
+		4933480B1D4D1877003847CD /* AgentOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentOverviewViewController.swift; sourceTree = "<group>"; };
+		4933480D1D4D18A6003847CD /* AgentAlbumsTableViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAlbumsTableViewControler.swift; sourceTree = "<group>"; };
+		4933480F1D4D18BD003847CD /* AgentAlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		493348111D4D18D9003847CD /* AgentDetailsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentDetailsContainerViewController.swift; sourceTree = "<group>"; };
+		493348131D4D1A8D003847CD /* AgentOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		493348151D4D1A9E003847CD /* AgentAlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAlbumTableViewCell.swift; sourceTree = "<group>"; };
+		493348171D4D1AB7003847CD /* AgentPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4933481A1D4D1BA1003847CD /* AgentListTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentListTableViewModel.swift; sourceTree = "<group>"; };
+		4933481E1D4D2B9F003847CD /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		493348211D4D2F11003847CD /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		493348241D4D316C003847CD /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		493348271D4E7CAD003847CD /* PortfoliousRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfoliousRootNavigationController.swift; sourceTree = "<group>"; };
+		493348291D4E828D003847CD /* AgentOverviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentOverviewViewModel.swift; sourceTree = "<group>"; };
+		4933482E1D4E96E9003847CD /* AgentAlbumsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAlbumsViewModel.swift; sourceTree = "<group>"; };
+		493348301D4EBFF2003847CD /* AlbumPhotosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewModel.swift; sourceTree = "<group>"; };
+		493348321D4EC768003847CD /* ImageFromServerURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFromServerURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +133,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493347ED1D4CD8C1003847CD /* Result.framework in Frameworks */,
+				493347E91D4CD8C0003847CD /* ReactiveCocoa.framework in Frameworks */,
+				493348251D4D316C003847CD /* Curry.framework in Frameworks */,
+				493347EB1D4CD8C1003847CD /* ReactiveJSON.framework in Frameworks */,
+				493348221D4D2F11003847CD /* Runes.framework in Frameworks */,
+				4933481F1D4D2B9F003847CD /* Argo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +162,7 @@
 		493347AC1D4CD042003847CD = {
 			isa = PBXGroup;
 			children = (
+				493347F01D4CD8D3003847CD /* Frameworks */,
 				493347B71D4CD042003847CD /* Portfolious */,
 				493347CC1D4CD042003847CD /* PortfoliousTests */,
 				493347D71D4CD042003847CD /* PortfoliousUITests */,
@@ -97,9 +183,13 @@
 		493347B71D4CD042003847CD /* Portfolious */ = {
 			isa = PBXGroup;
 			children = (
+				4933482B1D4E9675003847CD /* Extension */,
+				493347F61D4CDB4F003847CD /* Views */,
+				493347F41D4CDB38003847CD /* ViewModels */,
+				493347F31D4CDB2E003847CD /* Models */,
+				493347F21D4CDB24003847CD /* API */,
 				493347B81D4CD042003847CD /* AppDelegate.swift */,
-				493347BA1D4CD042003847CD /* ViewController.swift */,
-				493347BC1D4CD042003847CD /* Main.storyboard */,
+				493347FE1D4CFEA1003847CD /* Fonts */,
 				493347BF1D4CD042003847CD /* Assets.xcassets */,
 				493347C11D4CD042003847CD /* LaunchScreen.storyboard */,
 				493347C41D4CD042003847CD /* Info.plist */,
@@ -125,6 +215,108 @@
 			path = PortfoliousUITests;
 			sourceTree = "<group>";
 		};
+		493347F01D4CD8D3003847CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				493348211D4D2F11003847CD /* Runes.framework */,
+				493348241D4D316C003847CD /* Curry.framework */,
+				4933481E1D4D2B9F003847CD /* Argo.framework */,
+				493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */,
+				493347E71D4CD8C0003847CD /* ReactiveJSON.framework */,
+				493347E81D4CD8C0003847CD /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		493347F21D4CDB24003847CD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				493347F81D4CDBEC003847CD /* JSONPlaceholderClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		493347F31D4CDB2E003847CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				493347FA1D4CE124003847CD /* User.swift */,
+				493347FC1D4CE12A003847CD /* Album.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		493347F41D4CDB38003847CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4933481A1D4D1BA1003847CD /* AgentListTableViewModel.swift */,
+				493348291D4E828D003847CD /* AgentOverviewViewModel.swift */,
+				4933482E1D4E96E9003847CD /* AgentAlbumsViewModel.swift */,
+				493348301D4EBFF2003847CD /* AlbumPhotosViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		493347F51D4CDB41003847CD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				493348271D4E7CAD003847CD /* PortfoliousRootNavigationController.swift */,
+				493348091D4D1855003847CD /* AgentListTableViewController.swift */,
+				4933480B1D4D1877003847CD /* AgentOverviewViewController.swift */,
+				4933480D1D4D18A6003847CD /* AgentAlbumsTableViewControler.swift */,
+				4933480F1D4D18BD003847CD /* AgentAlbumCollectionViewController.swift */,
+				493348111D4D18D9003847CD /* AgentDetailsContainerViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		493347F61D4CDB4F003847CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				493348051D4D0664003847CD /* Theme.swift */,
+				493347F71D4CDB56003847CD /* Storyboard */,
+				493347F51D4CDB41003847CD /* ViewControllers */,
+				493348191D4D1ACF003847CD /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		493347F71D4CDB56003847CD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				493347BC1D4CD042003847CD /* Main.storyboard */,
+				493348071D4D0BDF003847CD /* MainStoryboard.swift */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		493347FE1D4CFEA1003847CD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				493348011D4D054B003847CD /* SF-UI-Display-Medium.otf */,
+				493347FF1D4CFF31003847CD /* SF-UI-Display-Regular.otf */,
+				493348031D4D0555003847CD /* SF-UI-Display-Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		493348191D4D1ACF003847CD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				493348131D4D1A8D003847CD /* AgentOverviewTableViewCell.swift */,
+				493348151D4D1A9E003847CD /* AgentAlbumTableViewCell.swift */,
+				493348171D4D1AB7003847CD /* AgentPhotoCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4933482B1D4E9675003847CD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				493348321D4EC768003847CD /* ImageFromServerURL.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +327,8 @@
 				493347B11D4CD042003847CD /* Sources */,
 				493347B21D4CD042003847CD /* Frameworks */,
 				493347B31D4CD042003847CD /* Resources */,
+				493347EF1D4CD8C1003847CD /* Embed Frameworks */,
+				493347F11D4CD959003847CD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,6 +425,9 @@
 			files = (
 				493347C31D4CD042003847CD /* LaunchScreen.storyboard in Resources */,
 				493347C01D4CD042003847CD /* Assets.xcassets in Resources */,
+				493348041D4D0555003847CD /* SF-UI-Display-Light.otf in Resources */,
+				493348021D4D054B003847CD /* SF-UI-Display-Medium.otf in Resources */,
+				493348001D4CFF31003847CD /* SF-UI-Display-Regular.otf in Resources */,
 				493347BE1D4CD042003847CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,13 +448,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		493347F11D4CD959003847CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		493347B11D4CD042003847CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493347BB1D4CD042003847CD /* ViewController.swift in Sources */,
+				4933482A1D4E828D003847CD /* AgentOverviewViewModel.swift in Sources */,
+				493348161D4D1A9E003847CD /* AgentAlbumTableViewCell.swift in Sources */,
+				493347FB1D4CE124003847CD /* User.swift in Sources */,
+				493348281D4E7CAD003847CD /* PortfoliousRootNavigationController.swift in Sources */,
 				493347B91D4CD042003847CD /* AppDelegate.swift in Sources */,
+				493348181D4D1AB7003847CD /* AgentPhotoCollectionViewCell.swift in Sources */,
+				493348121D4D18D9003847CD /* AgentDetailsContainerViewController.swift in Sources */,
+				493348061D4D0664003847CD /* Theme.swift in Sources */,
+				493348141D4D1A8D003847CD /* AgentOverviewTableViewCell.swift in Sources */,
+				4933480E1D4D18A6003847CD /* AgentAlbumsTableViewControler.swift in Sources */,
+				493348081D4D0BDF003847CD /* MainStoryboard.swift in Sources */,
+				493347F91D4CDBEC003847CD /* JSONPlaceholderClient.swift in Sources */,
+				4933481B1D4D1BA1003847CD /* AgentListTableViewModel.swift in Sources */,
+				493348101D4D18BD003847CD /* AgentAlbumCollectionViewController.swift in Sources */,
+				493348311D4EBFF2003847CD /* AlbumPhotosViewModel.swift in Sources */,
+				4933480C1D4D1877003847CD /* AgentOverviewViewController.swift in Sources */,
+				493348331D4EC768003847CD /* ImageFromServerURL.swift in Sources */,
+				4933480A1D4D1855003847CD /* AgentListTableViewController.swift in Sources */,
+				4933482F1D4E96E9003847CD /* AgentAlbumsViewModel.swift in Sources */,
+				493347FD1D4CE12A003847CD /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +638,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Portfolious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Portfolious;
@@ -412,6 +653,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Portfolious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Portfolious;

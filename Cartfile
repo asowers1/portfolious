@@ -1,0 +1,4 @@
+github "KevinVitale/ReactiveJSON" "master"
+github "thoughtbot/Argo"
+github "thoughtbot/Runes"
+github "thoughtbot/Curry"
