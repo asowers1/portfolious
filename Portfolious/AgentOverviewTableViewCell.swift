@@ -9,6 +9,5 @@
 import UIKit
 
 class AgentOverviewTableViewCell: UITableViewCell {
-    @IBOutlet weak var imagePlaceholder: UIImageView!
     @IBOutlet weak var agentName: UILabel!
 }
