@@ -24,19 +24,3 @@ public struct JSONPlaceholder: JSONService, ServiceHostType {
     public static var path: String? { return nil }
     //--------------------------------------------------------------------------
 }
-
-public struct Placeholder: JSONService, ServiceHostType {
-    private static let _sharedInstance = InstanceType()
-    //--------------------------------------------------------------------------
-    // protocol: JSONService
-    public typealias InstanceType = Placeholder
-    public static func sharedInstance() -> InstanceType {
-        return _sharedInstance
-    }
-    //--------------------------------------------------------------------------
-    // protocol: ServiceHostType
-    public static var scheme: String { return "http" }
-    public static var host: String { return "placehold.it" }
-    public static var path: String? { return nil }
-    //--------------------------------------------------------------------------
-}
