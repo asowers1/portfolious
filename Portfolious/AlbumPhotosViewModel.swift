@@ -7,55 +7,63 @@
 //
 
 import Foundation
-import ReactiveJSON
 import Argo
 import Result
 import UIKit
+import ReactiveJSON
 
 protocol AlbumPhotosViewModelDelegate: class {
-    func didUpdateWith(viewModel viewModel: AlbumPhotosViewModel)
+    func didUpdateWith(_ viewModel: AlbumPhotosViewModel)
 }
 
 struct AlbumPhotosViewModel {
-    var album: Album
-    var photos: [Photo] = [Photo]() {
+	
+	var album: Album
+	var photos: [Photo] = [Photo]() {
         didSet {
-            delegate?.didUpdateWith(viewModel: self)
+            delegate?.didUpdateWith(self)
         }
     }
-    var navigationTitle: String {
+	
+	var navigationTitle: String {
         return album.title
     }
-    weak var delegate: AlbumPhotosViewModelDelegate?
-    init(album: Album) {
+	
+	weak var delegate: AlbumPhotosViewModelDelegate?
+	
+	init(album: Album) {
         self.album = album
     }
+	
+	// this is where the magic happens 🎉
     mutating func getPhotos() {
-        JSONPlaceholder
-            .request(endpoint: "photos/?albumId=\(album.id)")
-            .collect()
-            .startWithResult { (result: Result<[AnyObject], NetworkError>) in
-                switch result {
-                case .Success(let photos):
-                    var newPhotos = [Photo]()
-                    photos.forEach({
-                        if let photo = Photo.decode(JSON($0)).value {
-                            newPhotos.append(photo)
-                        }
-                    })
-                    self.photos = newPhotos
-                case .Failure(let error):
-                    print("Error: \(error)")
-                }
-        }
+		let endpoint = "photos/?albumId=\(album.id)"
+		// ugly copy: http://stackoverflow.com/questions/38058280/modifying-struct-instance-variables-within-a-dispatch-closure-in-swift
+		var copy = self
+		JSONPlaceholder
+			.request(endpoint: endpoint)
+			.startWithResult { (result: Result<[AnyObject], NetworkError>) in
+				switch result {
+				case .success(let photos):
+					copy.photos = photos.flatMap {
+						Photo.decode(JSON($0)).value
+					}
+				case .failure(let error):
+					print("Error: \(error)")
+				}
+			}
+		
+		self = copy
+	}
+	
+	
+	
+    func imageView(forIndexPath indexPath: IndexPath, andImageView imageView: UIImageView?) {
+        imageView?.imageFromServerURL(photos[indexPath.row].thumbnailUrl)
     }
     
-    func imageView(forIndexPath indexPath: NSIndexPath, andImageView imageView: UIImageView?) {
-        imageView?.imageFromServerURL(photos[indexPath.row].url)
-    }
-    
-    func cell(forIndexPath indexPath: NSIndexPath, onCollectionView collectionView: UICollectionView) -> AgentPhotoCollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MainStoryboard.ReuseIdentifiers.AgentPhotoCell, forIndexPath: indexPath) as! AgentPhotoCollectionViewCell
+    func cell(forIndexPath indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> AgentPhotoCollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainStoryboard.ReuseIdentifiers.AgentPhotoCell, for: indexPath) as! AgentPhotoCollectionViewCell
         imageView(forIndexPath: indexPath, andImageView: cell.imageView)
         return cell
     }

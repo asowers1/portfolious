@@ -9,18 +9,14 @@
 import Foundation
 import ReactiveJSON
 
-public struct JSONPlaceholder: JSONService, ServiceHostType {
-    private static let _sharedInstance = InstanceType()
-    //--------------------------------------------------------------------------
-    // protocol: JSONService
-    public typealias InstanceType = JSONPlaceholder
-    public static func sharedInstance() -> InstanceType {
-        return _sharedInstance
-    }
-    //--------------------------------------------------------------------------
-    // protocol: ServiceHostType
-    public static var scheme: String { return "http" }
-    public static var host: String { return "jsonplaceholder.typicode.com" }
-    public static var path: String? { return nil }
-    //--------------------------------------------------------------------------
+/// A JSON client for the JSONPlaceholder API
+struct JSONPlaceholder: Singleton, ServiceHost {
+	// 'Singleton'
+	fileprivate(set) static var shared = Instance()
+	typealias Instance = JSONPlaceholder
+	
+	// 'ServiceHost'
+	static var scheme: String { return "https" }
+	static var host: String { return "jsonplaceholder.typicode.com" }
+	static var path: String? { return nil }
 }

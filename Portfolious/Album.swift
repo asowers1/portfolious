@@ -24,7 +24,7 @@ struct Album {
 }
 
 extension Album: Decodable {
-    static func decode(json: JSON) -> Decoded<Album> {
+    static func decode(_ json: JSON) -> Decoded<Album> {
         return curry(self.init)
             <^> json <| "id"
             <*> json <| "userId"
@@ -55,7 +55,7 @@ struct Photo {
 }
 
 extension Photo: Decodable {
-    static func decode(json: JSON) -> Decoded<Photo> {
+    static func decode(_ json: JSON) -> Decoded<Photo> {
         return curry(self.init)
             <^> json <| "albumId"
             <*> json <| "id"

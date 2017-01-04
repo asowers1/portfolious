@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Argo'
-  spec.version = '3.1.0'
+  spec.version = '4.1.1'
   spec.summary = 'Functional JSON parsing library for Swift.'
   spec.homepage = 'https://github.com/thoughtbot/Argo'
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,8 +10,11 @@ Pod::Spec.new do |spec|
     'thoughtbot' => nil,
   }
   spec.social_media_url = 'http://twitter.com/thoughtbot'
-  spec.source = { :git => 'https://github.com/thoughtbot/Argo.git', :tag => "v#{spec.version}", :submodules => true }
-  spec.source_files = 'Argo/**/*.{h,swift}', 'Carthage/Checkouts/Runes/Source/Runes.swift'
+  spec.source = { :git => 'https://github.com/thoughtbot/Argo.git', :tag => "v#{spec.version}" }
+  spec.source_files = 'Sources/**/*.{h,swift}'
+
+  spec.dependency 'Runes', '>= 4.0.0'
+
   spec.requires_arc = true
   spec.compiler_flags = '-whole-module-optimization'
   spec.ios.deployment_target = '8.0'

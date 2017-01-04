@@ -22,13 +22,13 @@ class AgentOverviewViewController: UIViewController {
     
     var viewModel: AgentOverviewViewModel?
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if let viewModel = viewModel {
             setupWith(viewModel: viewModel)
         }
     }
     
-    func setupWith(viewModel viewModel: AgentOverviewViewModel) {
+    func setupWith(viewModel: AgentOverviewViewModel) {
         agentDetailsContainerViewController?.agentName?.text = viewModel.user.name
         agentDetailsContainerViewController?.agentEmail?.text = viewModel.user.email
         agentDetailsContainerViewController?.agentPhone?.text = viewModel.user.phone
@@ -38,20 +38,20 @@ class AgentOverviewViewController: UIViewController {
 
 //MARK- Dependency Injection
 extension AgentOverviewViewController {
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
             case MainStoryboard.Segues.AgentDetailsContainerViewControllerSegue:
-                if let vc = segue.destinationViewController as? AgentDetailsContainerViewController {
+                if let vc = segue.destination as? AgentDetailsContainerViewController {
                     agentDetailsContainerViewController = vc
                 }
             case MainStoryboard.Segues.AgentAlbumsTableViewControllerContainerSegue:
-                if let vc = segue.destinationViewController as? AgentAlbumsTableViewControler {
+                if let vc = segue.destination as? AgentAlbumsTableViewControler {
                     vc.user = viewModel?.user
                     agentAlbumsTableViewController = vc
                 }
             case MainStoryboard.Segues.AgentAlbumCollectionViewControllerSegue:
-                if let vc = segue.destinationViewController as? AgentAlbumCollectionViewController {
+                if let vc = segue.destination as? AgentAlbumCollectionViewController {
                     vc.album = agentAlbumsTableViewController?.viewModel?.albums[(agentAlbumsTableViewController?.tableView.indexPathForSelectedRow?.row ?? -1)]
                 }
             default: break

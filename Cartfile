@@ -1,4 +1,5 @@
-github "KevinVitale/ReactiveJSON" "master"
-github "thoughtbot/Argo"
-github "thoughtbot/Runes"
-github "thoughtbot/Curry"
+github "ReactiveCocoa/ReactiveCocoa" "5.0.0-rc.1"
+github "operationstrategy/ReactiveJSON" ~> 0.1
+github "thoughtbot/Argo" ~> 4.1
+github "thoughtbot/Curry" ~> 3.0
+github "thoughtbot/Runes" ~> 4.0

@@ -24,3 +24,8 @@ can be.
 - Interacting with the `JSON` enum // TODO
 - Writing your own custom parser // TODO
 - More complex parsers // TODO
+
+## Common Gotchas
+
+- [`curry` limitations](Curry-Limitations.md)
+- [Compilation errors](Compilation-Errors.md)

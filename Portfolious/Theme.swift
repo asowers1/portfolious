@@ -12,6 +12,6 @@ import UIKit
 struct Theme {
     struct Color {
         static let Aquamarine = UIColor(colorLiteralRed: 80.0 / 255.0, green: 227 / 255.0, blue: 194 / 255.0, alpha: 1.0)
-        static let NavigationWhite = UIColor.whiteColor()
+        static let NavigationWhite = UIColor.white
     }
 }

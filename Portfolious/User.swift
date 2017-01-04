@@ -23,7 +23,7 @@ struct User {
 }
 
 extension User: Decodable {
-    static func decode(json: JSON) -> Decoded<User> {
+    static func decode(_ json: JSON) -> Decoded<User> {
         return curry(self.init)
             <^> json <| "id"
             <*> json <| "name"
@@ -50,7 +50,7 @@ struct Address {
 }
 
 extension Address: Decodable {
-    static func decode(json: JSON) -> Decoded<Address> {
+    static func decode(_ json: JSON) -> Decoded<Address> {
         return curry(self.init)
             <^> json <| "street"
             <*> json <| "suite"
@@ -70,7 +70,7 @@ struct Geo {
 }
 
 extension Geo: Decodable {
-    static func decode(json: JSON) -> Decoded<Geo> {
+    static func decode(_ json: JSON) -> Decoded<Geo> {
         return curry(self.init)
             <^> json <| "lat"
             <*> json <| "lon"
@@ -89,7 +89,7 @@ struct Company {
 }
 
 extension Company: Decodable {
-    static func decode(json: JSON) -> Decoded<Company> {
+    static func decode(_ json: JSON) -> Decoded<Company> {
         return curry(self.init)
             <^> json <| "name"
             <*> json <| "catchPhrase"
