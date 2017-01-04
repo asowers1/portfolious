@@ -27,13 +27,13 @@ class AgentAlbumsTableViewControler: UITableViewController {
 
 //MARK- TableView Delegateion
 extension AgentAlbumsTableViewControler {
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.albums.count ?? 0
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        parentViewController?.performSegueWithIdentifier(MainStoryboard.Segues.AgentAlbumCollectionViewControllerSegue, sender: parentViewController)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        parent?.performSegue(withIdentifier: MainStoryboard.Segues.AgentAlbumCollectionViewControllerSegue, sender: parent)
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return viewModel!.cell(forIndexPath: indexPath, onTableView: tableView)
     }
 }

@@ -21,7 +21,7 @@ class AgentAlbumCollectionViewController: UICollectionViewController {
             viewModel?.getPhotos()
         }
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = viewModel?.navigationTitle ?? "Photos"
     }
@@ -29,21 +29,21 @@ class AgentAlbumCollectionViewController: UICollectionViewController {
 
 //MARK- CollectionView delegation
 extension AgentAlbumCollectionViewController {
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.photos.count ?? 0
     }
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("did the thing at \(indexPath)")
     }
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return viewModel!.cell(forIndexPath: indexPath, onCollectionView: collectionView)
     }
 }
 
 //MARK- ViewModel delegation
 extension AgentAlbumCollectionViewController: AlbumPhotosViewModelDelegate {
-    func didUpdateWith(viewModel viewModel: AlbumPhotosViewModel) {
-        dispatch_async(dispatch_get_main_queue()) { [weak self] in
+    func didUpdateWith(_ viewModel: AlbumPhotosViewModel) {
+        DispatchQueue.main.async { [weak self] in
             self?.viewModel = viewModel
             self?.collectionView?.reloadData()
         }

@@ -1,14 +1,11 @@
 machine:
   xcode:
-    version: "7.3"
-  environment:
-    XCODE_SCHEME: nonce
-    XCODE_WORKSPACE: nonce.xcworkspace
+    version: "8.0"
 
 dependencies:
   override:
-    - git submodule update --init --recursive
+    - bin/setup
 
 test:
   override:
-    - bin/test
+    - bin/test -r

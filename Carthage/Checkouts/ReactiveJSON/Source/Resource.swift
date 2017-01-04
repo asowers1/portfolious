@@ -1,15 +1,15 @@
-public struct Resource<I: Hashable>: Resourceable {
-    //--------------------------------------------------------------------------
-    public typealias IdentityValue = I
-    public typealias Attributes = JSONResource
-    //--------------------------------------------------------------------------
-    public var id: IdentityValue? {
-        return self["id"] as? IdentityValue
-    }
-    //--------------------------------------------------------------------------
-    public let attributes: Attributes?
-    //--------------------------------------------------------------------------
-    public init(_ json: [String:AnyObject]) {
-        attributes = Attributes(json)
+// MARK: - Resource -
+//------------------------------------------------------------------------------
+public protocol Resource: JSONConvertible, Identity {
+    /// The resource's attributes.
+    associatedtype Attributes
+
+    /// - parameter attributes: A native representation of the resource.
+    var attributes: Attributes? { get }
+}
+
+extension Resource where Attributes == JSONResource {
+    public subscript(key: String) -> AnyObject? {
+        return attributes?.json[key]
     }
 }

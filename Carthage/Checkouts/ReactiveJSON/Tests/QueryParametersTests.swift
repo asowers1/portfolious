@@ -10,31 +10,20 @@ class QueryParametersTests: QuickSpec {
                 expect(params).to(beEmpty())
             }
 
-            it("handles 'id' parameter (single)") {
-                let params = ["id":5].queryItems()
-                expect(params.count).to(equal(1))
-
-                let queryItem = params.first!
-                expect(queryItem.name).to(equal("id"))
-                expect(queryItem.value).to(equal("5"))
-            }
-
             it("handles 'ids' parameter (comma-separated)") {
-                let params = ["ids":"1,2,3,4,5"].queryItems()
-                expect(params.count).to(equal(1))
-
-                let queryItem = params.first!
-                expect(queryItem.name).to(equal("ids"))
-                expect(queryItem.value).to(equal("1,2,3,4,5"))
+                let params: [String:AnyObject] = [ "ids" : "1,2,3,4,5" as AnyObject ]
+                expect(params.percentEncodedQuery).to(equal("ids=1,2,3,4,5"))
             }
 
-            it("handles url-encoding (whitespace)") {
-                let params = ["id":"kevin vitale"].queryItems()
-                expect(params.count).to(equal(1))
+            it("handles url-encoding (special characters)") {
+                let params: [String:AnyObject] = [
+                    "email": "this+thing1@someplace.com" as AnyObject,
+                    "name": "Thing 1" as AnyObject,
+                    "password": "A12345!" as AnyObject,
+                    "username": "thing1" as AnyObject,
+                ]
 
-                let queryItem = params.first!
-                expect(queryItem.name).to(equal("id"))
-                expect(queryItem.value).to(equal("kevin%20vitale"))
+                expect(params.percentEncodedQuery).to(equal("email=this+thing1@someplace.com&name=Thing%201&password=A12345!&username=thing1"))
             }
         }
     }

@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gDh-VC-LwF">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gDh-VC-LwF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="SF-UI-Display-Regular.otf">
+        <array key="SF-UI-Display-Regular.otf">
             <string>SFUIDisplay-Regular</string>
-            <string>SFUIDisplay-Regular</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Portfolious-->
@@ -19,13 +22,13 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="Iwn-Tg-Htm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentPortfolioCell" rowHeight="64" id="knW-sD-r9x" customClass="AgentOverviewTableViewCell" customModule="Portfolious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knW-sD-r9x" id="OXP-2K-2cV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Sowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pej-fU-p9Y">
@@ -56,14 +59,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Portfolious" id="QIg-YV-c4N"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="VmN-5r-5GZ" kind="show" identifier="AgentOverviewViewControllerSegue" id="cMb-XK-FAf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zv6-hN-Cia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679.5" y="234.5"/>
+            <point key="canvasLocation" x="490" y="234"/>
         </scene>
         <!--Agent Overview View Controller-->
         <scene sceneID="nN0-g2-yTg">
@@ -135,7 +137,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="k7c-oJ-e1C" firstAttribute="leading" secondItem="WFd-gJ-Wsk" secondAttribute="leading" id="3t4-zf-eDR"/>
                             <constraint firstItem="v2Z-a9-7Om" firstAttribute="top" secondItem="k7c-oJ-e1C" secondAttribute="bottom" id="7bi-xe-gjk"/>
@@ -143,14 +145,13 @@
                             <constraint firstAttribute="trailing" secondItem="k7c-oJ-e1C" secondAttribute="trailing" id="NbW-2m-49Y"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="ov7-FX-NmY" kind="show" identifier="AgentAlbumCollectionViewControllerSegue" id="Hjr-RH-HME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIC-wp-hXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151.5" y="234.5"/>
+            <point key="canvasLocation" x="1234" y="233"/>
         </scene>
         <!--Agent Album Collection View Controller-->
         <scene sceneID="WRm-yn-YKa">
@@ -159,7 +160,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" id="H0T-3s-KhA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gtb-Yt-Hwe">
                             <size key="itemSize" width="182" height="211"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -168,7 +169,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AgentPhotoCell" id="Jxp-vX-9LE" customClass="AgentPhotoCollectionViewCell" customModule="Portfolious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="182" height="211"/>
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="182" height="211"/>
@@ -178,9 +179,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="211"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Lqy-IU-IU3" secondAttribute="trailing" id="9Gh-Ew-z3Z"/>
                                     <constraint firstItem="Lqy-IU-IU3" firstAttribute="leading" secondItem="Jxp-vX-9LE" secondAttribute="leading" id="JRs-Fz-iVW"/>
@@ -198,17 +198,15 @@
                             <outlet property="delegate" destination="ov7-FX-NmY" id="RoL-0s-TO0"/>
                         </connections>
                     </collectionView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQZ-0j-SBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620.5" y="234.5"/>
+            <point key="canvasLocation" x="2020" y="233"/>
         </scene>
         <!--Portfolious Root Navigation Controller-->
         <scene sceneID="qWF-F3-ZAB">
             <objects>
                 <navigationController id="gDh-VC-LwF" customClass="PortfoliousRootNavigationController" customModule="Portfolious" customModuleProvider="target" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qrx-Qn-uRC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -219,7 +217,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jw0-q0-gKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="235"/>
+            <point key="canvasLocation" x="-266" y="233"/>
         </scene>
         <!--Agent Albums Table View Controler-->
         <scene sceneID="Qt9-gi-LJB">
@@ -228,17 +226,17 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="aHu-cn-0E8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgentAlbumCell" rowHeight="64" id="uK7-T6-FOZ" customClass="AgentAlbumTableViewCell" customModule="Portfolious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uK7-T6-FOZ" id="UYk-iw-HKC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKe-wW-1VZ">
-                                            <rect key="frame" x="17" y="19.5" width="112.5" height="24"/>
+                                            <rect key="frame" x="17" y="20" width="113" height="24"/>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -261,12 +259,16 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBc-Sr-GCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425.5" y="906.5"/>
+            <point key="canvasLocation" x="1631" y="904"/>
         </scene>
         <!--Agent Details Container View Controller-->
         <scene sceneID="VJb-LU-jgj">
             <objects>
                 <viewController id="Say-XK-i8Z" customClass="AgentDetailsContainerViewController" customModule="Portfolious" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kz8-3c-md9"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXf-H9-FRG"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yze-wX-vLt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,7 +310,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P2o-3X-pyx" firstAttribute="leading" secondItem="dnq-yd-YWD" secondAttribute="leading" id="07Z-jw-GRn"/>
                             <constraint firstItem="Kfs-GF-39f" firstAttribute="top" secondItem="I0T-ep-aI9" secondAttribute="bottom" id="5XQ-Bf-Zt5"/>

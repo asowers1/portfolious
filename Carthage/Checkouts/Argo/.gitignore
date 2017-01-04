@@ -28,11 +28,15 @@ build/
 Pods
 
 # Carthage
-Carthage/Build
+Carthage/
 
 # AppCode specific files
 .idea/
 *.iml
+
+# Swift Package Manager
+.build/
+Packages/
 
 Argo.framework.zip
 *.xcscmblueprint

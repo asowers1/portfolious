@@ -13,8 +13,6 @@
 		493347C31D4CD042003847CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493347C11D4CD042003847CD /* LaunchScreen.storyboard */; };
 		493347CE1D4CD042003847CD /* PortfoliousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347CD1D4CD042003847CD /* PortfoliousTests.swift */; };
 		493347D91D4CD042003847CD /* PortfoliousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493347D81D4CD042003847CD /* PortfoliousUITests.swift */; };
-		493347E91D4CD8C0003847CD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */; };
-		493347EA1D4CD8C1003847CD /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		493347EB1D4CD8C1003847CD /* ReactiveJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E71D4CD8C0003847CD /* ReactiveJSON.framework */; };
 		493347EC1D4CD8C1003847CD /* ReactiveJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E71D4CD8C0003847CD /* ReactiveJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		493347ED1D4CD8C1003847CD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493347E81D4CD8C0003847CD /* Result.framework */; };
@@ -47,6 +45,8 @@
 		4933482F1D4E96E9003847CD /* AgentAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933482E1D4E96E9003847CD /* AgentAlbumsViewModel.swift */; };
 		493348311D4EBFF2003847CD /* AlbumPhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348301D4EBFF2003847CD /* AlbumPhotosViewModel.swift */; };
 		493348331D4EC768003847CD /* ImageFromServerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493348321D4EC768003847CD /* ImageFromServerURL.swift */; };
+		49D495031E1CA61D003240AD /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D495021E1CA61D003240AD /* ReactiveSwift.framework */; };
+		49D495041E1CA61D003240AD /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49D495021E1CA61D003240AD /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +74,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				493347EE1D4CD8C1003847CD /* Result.framework in Embed Frameworks */,
-				493347EA1D4CD8C1003847CD /* ReactiveCocoa.framework in Embed Frameworks */,
 				493348261D4D316C003847CD /* Curry.framework in Embed Frameworks */,
 				493347EC1D4CD8C1003847CD /* ReactiveJSON.framework in Embed Frameworks */,
 				493348231D4D2F11003847CD /* Runes.framework in Embed Frameworks */,
 				493348201D4D2B9F003847CD /* Argo.framework in Embed Frameworks */,
+				49D495041E1CA61D003240AD /* ReactiveSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +98,6 @@
 		493347D41D4CD042003847CD /* PortfoliousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfoliousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493347D81D4CD042003847CD /* PortfoliousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfoliousUITests.swift; sourceTree = "<group>"; };
 		493347DA1D4CD042003847CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		493347E71D4CD8C0003847CD /* ReactiveJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveJSON.framework; path = Carthage/Build/iOS/ReactiveJSON.framework; sourceTree = "<group>"; };
 		493347E81D4CD8C0003847CD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		493347F81D4CDBEC003847CD /* JSONPlaceholderClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderClient.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		4933482E1D4E96E9003847CD /* AgentAlbumsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentAlbumsViewModel.swift; sourceTree = "<group>"; };
 		493348301D4EBFF2003847CD /* AlbumPhotosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewModel.swift; sourceTree = "<group>"; };
 		493348321D4EC768003847CD /* ImageFromServerURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFromServerURL.swift; sourceTree = "<group>"; };
+		49D495021E1CA61D003240AD /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +134,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				493347ED1D4CD8C1003847CD /* Result.framework in Frameworks */,
-				493347E91D4CD8C0003847CD /* ReactiveCocoa.framework in Frameworks */,
 				493348251D4D316C003847CD /* Curry.framework in Frameworks */,
 				493347EB1D4CD8C1003847CD /* ReactiveJSON.framework in Frameworks */,
 				493348221D4D2F11003847CD /* Runes.framework in Frameworks */,
 				4933481F1D4D2B9F003847CD /* Argo.framework in Frameworks */,
+				49D495031E1CA61D003240AD /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,10 +218,10 @@
 		493347F01D4CD8D3003847CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49D495021E1CA61D003240AD /* ReactiveSwift.framework */,
 				493348211D4D2F11003847CD /* Runes.framework */,
 				493348241D4D316C003847CD /* Curry.framework */,
 				4933481E1D4D2B9F003847CD /* Argo.framework */,
-				493347E61D4CD8C0003847CD /* ReactiveCocoa.framework */,
 				493347E71D4CD8C0003847CD /* ReactiveJSON.framework */,
 				493347E81D4CD8C0003847CD /* Result.framework */,
 			);
@@ -382,18 +382,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Andrew Sowers";
 				TargetAttributes = {
 					493347B41D4CD042003847CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2DP9335PZJ;
+						LastSwiftMigration = 0820;
 					};
 					493347C81D4CD042003847CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 493347B41D4CD042003847CD;
 					};
 					493347D31D4CD042003847CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 493347B41D4CD042003847CD;
 					};
 				};
@@ -455,7 +459,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
@@ -563,8 +567,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -591,6 +597,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -609,8 +616,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -629,6 +638,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -638,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2DP9335PZJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -646,6 +658,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Portfolious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -653,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2DP9335PZJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -661,6 +675,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Portfolious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -672,6 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.PortfoliousTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Portfolious.app/Portfolious";
 			};
 			name = Debug;
@@ -684,6 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.PortfoliousTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Portfolious.app/Portfolious";
 			};
 			name = Release;
@@ -695,6 +712,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.PortfoliousUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Portfolious;
 			};
 			name = Debug;
@@ -706,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.PortfoliousUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Portfolious;
 			};
 			name = Release;
@@ -729,6 +748,7 @@
 				493347DF1D4CD042003847CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493347E01D4CD042003847CD /* Build configuration list for PBXNativeTarget "PortfoliousTests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +757,7 @@
 				493347E21D4CD042003847CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493347E31D4CD042003847CD /* Build configuration list for PBXNativeTarget "PortfoliousUITests" */ = {
 			isa = XCConfigurationList;
@@ -745,6 +766,7 @@
 				493347E51D4CD042003847CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

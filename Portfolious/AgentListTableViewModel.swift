@@ -13,7 +13,7 @@ import Argo
 import UIKit
 
 protocol AgentListTableViewModelDelegate: class {
-    func updateWith(viewModel: AgentListTableViewModel)
+    func updateWith(_ viewModel: AgentListTableViewModel)
 }
 
 struct AgentListTableViewModel {
@@ -23,26 +23,30 @@ struct AgentListTableViewModel {
             self.delegate?.updateWith(self)
         }
     }
-    
+	
+	
+	
+	// this is where the magic happens 🎉
     mutating func getUsers() {
+		// ugly copy: http://stackoverflow.com/questions/38058280/modifying-struct-instance-variables-within-a-dispatch-closure-in-swift
+		var copy = self
         JSONPlaceholder
             .request(endpoint: "users")
             .collect()
             .startWithResult { (result: Result<[AnyObject], NetworkError>) in
                 switch result {
-                case .Success(let users):
-                    var newUsers = [User]()
-                    users.forEach {
-                        if let user = User.decode(JSON($0)).value {
-                            newUsers.append(user)
-                        }
-                    }
-                    self.users = newUsers
-                case .Failure(let error):
+                case .success(let users):
+					copy.users = users.flatMap {
+						if let user = User.decode(JSON($0)).value {
+							return user
+						}
+						return nil
+					}
+                case .failure(let error):
                     print("Error: \(error)")
                 }
-        
-        }
+			}
+		self = copy
     }
     
     func agentOverviewModel(atIndex index: Int) -> AgentOverviewViewModel? {
@@ -53,8 +57,8 @@ struct AgentListTableViewModel {
         }
     }
     
-    func cell(forIndexPath indexPath: NSIndexPath, onTableView tableView: UITableView) -> AgentOverviewTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentPortfolioCell) as! AgentOverviewTableViewCell
+    func cell(forIndexPath indexPath: IndexPath, onTableView tableView: UITableView) -> AgentOverviewTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainStoryboard.ReuseIdentifiers.AgentPortfolioCell) as! AgentOverviewTableViewCell
         if users.indices.contains(indexPath.row) {
             let user = users[indexPath.row]
             

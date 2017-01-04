@@ -30,29 +30,29 @@ struct AgentAlbumViewModel {
     init(user: User) {
         self.user = user
     }
-    
+	
+	// this is where the magic happens 🎉
     mutating func getAlbums() {
-        JSONPlaceholder
-            .request(endpoint: "albums/?userId=\(user.id)")
-            .collect()
-            .startWithResult { (result: Result<[AnyObject], NetworkError>) in
-                switch result {
-                case .Success(let albums):
-                    var newAlbums = [Album]()
-                    albums.forEach({
-                        if let album = Album.decode(JSON($0)).value {
-                            newAlbums.append(album)
-                        }
-                    })
-                    self.albums = newAlbums
-                case .Failure(let error):
-                    print("Error: \(error)")
-                }
-        }
+		let endpoint = "albums/?userId=\(user.id)"
+		// ugly copy: http://stackoverflow.com/questions/38058280/modifying-struct-instance-variables-within-a-dispatch-closure-in-swift
+		var copy = self
+		JSONPlaceholder.request(endpoint: endpoint)
+			.collect()
+			.startWithResult { (result: Result<[AnyObject], NetworkError>) in
+				switch result {
+				case .success(let albums):
+					copy.albums = albums.flatMap {
+						Album.decode(JSON($0)).value
+					}
+				case .failure(let error):
+					print("Error: \(error)")
+				}
+			}
+		self = copy
     }
     
-    func cell(forIndexPath indexPath: NSIndexPath, onTableView tableView: UITableView) -> AgentAlbumTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.ReuseIdentifiers.AgentAlbumCell) as! AgentAlbumTableViewCell
+    func cell(forIndexPath indexPath: IndexPath, onTableView tableView: UITableView) -> AgentAlbumTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainStoryboard.ReuseIdentifiers.AgentAlbumCell) as! AgentAlbumTableViewCell
         cell.albumName?.text = albums[indexPath.row].title
         return cell
     }

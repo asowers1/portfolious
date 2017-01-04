@@ -11,15 +11,15 @@
 import UIKit
 
 extension UIImageView {
-    public func imageFromServerURL(urlString: String) {
+    public func imageFromServerURL(_ urlString: String) {
         
-        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: urlString)!, completionHandler: { (data, response, error) -> Void in
+        URLSession.shared.dataTask(with: URL(string: urlString)!, completionHandler: { (data, response, error) -> Void in
             
-            if error != nil {
-                print(error)
-                return
-            }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+			if let error = error {
+				print(error)
+				return
+			}
+            DispatchQueue.main.async(execute: { () -> Void in
                 let image = UIImage(data: data!)
                 self.image = image
             })
