@@ -12,6 +12,8 @@ import Result
 import Argo
 import UIKit
 
+typealias KeyType = Hashable & Equatable
+
 protocol AgentListTableViewModelDelegate: class {
     func updateWith(_ viewModel: AgentListTableViewModel)
 }
@@ -24,28 +26,23 @@ struct AgentListTableViewModel {
         }
     }
 	
-	
-	
 	// this is where the magic happens 🎉
     mutating func getUsers() {
 		// ugly copy: http://stackoverflow.com/questions/38058280/modifying-struct-instance-variables-within-a-dispatch-closure-in-swift
 		var copy = self
         JSONPlaceholder
-            .request(endpoint: "users")
-            .collect()
-            .startWithResult { (result: Result<[AnyObject], NetworkError>) in
-                switch result {
-                case .success(let users):
-					copy.users = users.flatMap {
-						if let user = User.decode(JSON($0)).value {
-							return user
-						}
-						return nil
+			.request(endpoint: "users")
+			.startWithResult { (result: Result<[AnyObject], NetworkError>) in
+				switch result {
+				case .success(let networkUsers):
+					copy.users = networkUsers.flatMap {
+						User.decode(JSON($0)).value
 					}
-                case .failure(let error):
-                    print("Error: \(error)")
-                }
-			}
+				case .failure(let error):
+					print("error: \(error)")
+				}
+		}
+		
 		self = copy
     }
     

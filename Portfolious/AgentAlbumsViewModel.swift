@@ -37,7 +37,6 @@ struct AgentAlbumViewModel {
 		// ugly copy: http://stackoverflow.com/questions/38058280/modifying-struct-instance-variables-within-a-dispatch-closure-in-swift
 		var copy = self
 		JSONPlaceholder.request(endpoint: endpoint)
-			.collect()
 			.startWithResult { (result: Result<[AnyObject], NetworkError>) in
 				switch result {
 				case .success(let albums):
@@ -48,6 +47,7 @@ struct AgentAlbumViewModel {
 					print("Error: \(error)")
 				}
 			}
+		
 		self = copy
     }
     

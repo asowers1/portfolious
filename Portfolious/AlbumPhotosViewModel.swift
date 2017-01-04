@@ -42,7 +42,6 @@ struct AlbumPhotosViewModel {
 		var copy = self
 		JSONPlaceholder
 			.request(endpoint: endpoint)
-			.collect()
 			.startWithResult { (result: Result<[AnyObject], NetworkError>) in
 				switch result {
 				case .success(let photos):
@@ -53,13 +52,14 @@ struct AlbumPhotosViewModel {
 					print("Error: \(error)")
 				}
 			}
+		
 		self = copy
 	}
 	
 	
 	
     func imageView(forIndexPath indexPath: IndexPath, andImageView imageView: UIImageView?) {
-        imageView?.imageFromServerURL(photos[indexPath.row].url)
+        imageView?.imageFromServerURL(photos[indexPath.row].thumbnailUrl)
     }
     
     func cell(forIndexPath indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> AgentPhotoCollectionViewCell {

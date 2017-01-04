@@ -16,7 +16,7 @@ struct JSONPlaceholder: Singleton, ServiceHost {
 	typealias Instance = JSONPlaceholder
 	
 	// 'ServiceHost'
-	static var scheme: String { return "http" }
-	static var host: String { return "0.0.0.0:8080" }
+	static var scheme: String { return "https" }
+	static var host: String { return "jsonplaceholder.typicode.com" }
 	static var path: String? { return nil }
 }
